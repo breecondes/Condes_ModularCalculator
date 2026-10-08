@@ -1,22 +1,11 @@
-# Condes_ModularCalculator
+Short Reflection:
 
-## Description
-A simple modular calculator program written in C++.
+1. In my calculator program, I created four distinct mathematical functions: add_numbers, subtract_numbers, multiply_numbers, and divide_numbers. Each of these functions is designed to handle a single arithmetic operation. Additionally, I used the required main function to drive the application, which handles the user interface, captures input, and manages the conditional logic for executing the calculations.
 
-The program asks the user for two numbers and allows them to choose:
-- Addition
-- Subtraction
-- Multiplication
-- Division
+2. Each of my arithmetic functions utilized two parameters of the double data type, which I named num_1 and num_2. These parameters serve as local placeholders within each function to receive and hold the two decimal numbers that need to be calculated. Using the double type ensures that the functions can process both whole numbers and floating-point decimals accurately.
+  
+3. When calling the functions inside my if-else blocks, I passed the local variables num_1 and num_2 as the arguments. These variables contain the actual numeric values typed in by the user and captured via cin earlier in the main function. For instance, when a user selects addition, the program executes add_numbers(num_1, num_2), passing those real-time inputs directly into the function.
+   
+4. My math functions used the return statement to send the computed arithmetic result back to the main function. The program captured this returned value by assigning it directly to a variable named result. At the very end of the program, after the conditional blocks finished executing, the program used cout to print the value stored inside result directly to the console for the user to see.
 
-The program uses separate functions for each operation and returns the calculated result.
-
-## Functions
-- 'add_numbers()' - adds two numbers
-- 'subtract_numbers()' - subtracts two numbers
-- 'multiply_numbers()' - multiplies two numbers
-- 'divide_numbers()' - divides two numbers
-
-## Versions
-### Version 1
-Initial working version of the modular calculator
+5. Dividing my calculator program into functions is much better than writing everything in one long block of code because it significantly improves organization, readability, and debugging. By breaking the code into modular pieces, I kept my main function focused on user interaction and menu navigation rather than cluttering it with mathematical operations. This design made troubleshooting much simpler; for example, when implementing safety checks like preventing division by zero, I could isolate that logic easily because the math formulas themselves were cleanly separated. Furthermore, this approach promotes code reusability and scalability. I only had to write the logic for each operation once, and if I want to expand the calculator in the future with new features—like square roots or exponents—I can easily drop in a new function without risking breaking the code that already works.
